@@ -21,14 +21,13 @@ productList:any;
 flag:any = false;
 tokenValid:any;
 inputForm:any=FormGroup;
-  router: any;
+  // router: any;
 // public totalItem : number = 0;
   // cartComponent: any;
 
   public searchTerm : string = '';
 
-  constructor( private snackBarService:SnackbarService ,private formBuilder:FormBuilder, private catalogService:CatalogService, private dialog:MatDialog, private userService:UserService,
-    private cartService:CartService)
+  constructor( private snackBarService:SnackbarService ,private formBuilder:FormBuilder, private catalogService:CatalogService, private dialog:MatDialog, private userService:UserService)
   {
     //  this.productList = this.cartService.cartItemList;
     //  console.log(this.productList.length)
@@ -76,11 +75,11 @@ this.inputForm = this.formBuilder.group({
     }
   }
 
-  search(event:any){
-    this.searchTerm = (event.target as HTMLInputElement).value;
-    console.log(this.searchTerm);
-    this.cartService.search.next(this.searchTerm);
-  }
+  // search(event:any){
+  //   this.searchTerm = (event.target as HTMLInputElement).value;
+  //   console.log(this.searchTerm);
+  //   this.cartService.search.next(this.searchTerm);
+  // }
     
   handleSignupAction()
   {

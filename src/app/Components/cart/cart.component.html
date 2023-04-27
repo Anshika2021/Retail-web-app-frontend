@@ -11,7 +11,7 @@
                             <th>Description</th>
                             <th>price</th>
                             <th>Quantity</th>
-                            <!-- <th>Total</th> -->
+                            <th>SubTotal</th> 
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -23,8 +23,18 @@
                             <td style="width:25%">{{item.prod_description}}</td>
 
                             <td>{{item.prod_price}}</td>
-                            <td>{{item.prod_quantity}}</td>
+                            
+                            <div class="content">
+                                <button type="button" class="btn btn-success" (click)="incQnt(item.prod_id, item.prod_quantity)"><i class="fa fa-plus"></i></button>
+                           <td> {{item.prod_quantity}}</td>
                             <!-- <td>{{item.prod_total}}</td> -->
+                          <button  type="button" class="btn btn-danger" (click)="decQnt(item.prod_id, item.prod_quantity)"><i class="fa fa-minus"></i></button>
+                                </div>
+                                
+
+                            <td>INR {{item.prod_quantity * item.prod_price | number}}</td>
+
+                               
                             <td>
                                 <a routerLink="/cart" [queryParams]="{deleted:item.cartItemid}">
                                     <button class="btn btn-danger" (click)="deleteCartItem(item.cartItemid)">

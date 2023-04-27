@@ -10,9 +10,9 @@ export class CartService {
   cartApi='http://localhost:8087';
 
 public cartItemList:any;
-public productList = new BehaviorSubject<any>([]);
+// public productList = new BehaviorSubject<any>([]);
 
-public search = new BehaviorSubject<String>("");
+// public search = new BehaviorSubject<String>("");
 
 
   constructor(private httpClient:HttpClient) { 
@@ -45,7 +45,7 @@ return this.httpClient.post(this.cartApi+"/add/cart/"+id ,data,{
 deleteCartItems(cartItemId:any)
 {
   return this.httpClient.get(this.cartApi+"/cart/deleteCartItem/"+cartItemId );
-  this.productList.next(this.cartItemList);
+  // this.productList.next(this.cartItemList);
 }
 // deleteAllByUserId(id:any){
 //   return this.httpClient.get(this.cartApi+"/cart/deleteAllByUserId"+id);

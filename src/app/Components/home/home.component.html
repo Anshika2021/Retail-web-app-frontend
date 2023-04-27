@@ -13,7 +13,8 @@
 <input type="text" class="form-control" placeholder="search products" matInput formControlName="input" name="input"  class="form-control">
 </form>
       </div>
-      <span  class="fas fa-search search-icon" [(ngModel)]="searchTerm" (keyup)="search($event)" (click)="handleSubmit()" routerLink="search"></span>
+      <span  class="fas fa-search search-icon" (click)="handleSubmit()" routerLink="search"></span>
+      <!-- [(ngModel)]="searchTerm" (keyup)="search($event)" -->
       
     </div >
       <ul *ngIf="flag == false">
