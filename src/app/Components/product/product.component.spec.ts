@@ -21,3 +21,51 @@ describe('ProductComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// describe('Test: ngONInit', () =>{
+  //   it('should initialize loginForm', () =>{
+  //     const loginForm = {
+  //       email: '',
+  //       password: ''
+  //     };
+  //     expect(fixture.loginForm).toEqual(loginForm);
+  //   });
+  // });
+
+
+  

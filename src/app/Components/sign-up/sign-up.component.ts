@@ -3,10 +3,10 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
-import { SnackbarService } from 'src/app/Service/snackbar.service';
+import { SnackbarService } from '../../Service/snackbar.service';
 
-import { UserService } from 'src/app/Service/user.service';
-import { GlobalConstants } from 'src/app/shared/GlobalConstrants';
+import { UserService } from '../../Service/user.service';
+import { GlobalConstants } from '../../shared/GlobalConstrants';
 
 @Component({
   selector: 'app-sign-up',

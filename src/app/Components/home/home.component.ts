@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { CartService } from 'src/app/Service/cart.service';
-import { UserService } from 'src/app/Service/user.service';
+import { UserService } from '../../Service/user.service';
 import { LoginComponent } from '../login/login.component';
 import { SignUpComponent } from '../sign-up/sign-up.component';
-// import { CartComponent } from '../cart/cart.component';
+ //import { CartComponent } from '../cart/cart.component';
 import jwt_Decode from 'jwt-decode';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { CatalogService } from 'src/app/Service/catalog.service';
-import { SnackbarService } from 'src/app/Service/snackbar.service';
+import { CatalogService } from '../../Service/catalog.service';
+import { SnackbarService } from '../../Service/snackbar.service';
 import { GlobalConstants } from 'src/app/shared/GlobalConstrants';
 
 @Component({

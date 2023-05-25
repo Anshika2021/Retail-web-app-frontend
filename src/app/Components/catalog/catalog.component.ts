@@ -1,11 +1,11 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { CartService } from 'src/app/Service/cart.service';
 import { CatalogService } from 'src/app/Service/catalog.service';
-import { SnackbarService } from 'src/app/Service/snackbar.service';
+import { SnackbarService } from '../../Service/snackbar.service';
 
-import { UserService } from 'src/app/Service/user.service';
+import { UserService } from '../../Service/user.service';
 import { GlobalConstants } from 'src/app/shared/GlobalConstrants';
-import { ProductMapper } from 'src/app/shared/ProductMapper';
+import { ProductMapper } from '../../shared/ProductMapper';
 
 @Component({
   selector: 'app-catalog',

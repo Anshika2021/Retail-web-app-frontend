@@ -28,6 +28,10 @@ import { MatInputModule } from '@angular/material/input';
 import { FilterPipe } from './shared/filter.pipe';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
+// import { environment } from './enviroments/environments/environment.prod';
+// import { FirestoreModule } from '@angular/fire/firestore';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,7 +65,10 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
     MatSnackBarModule,
     MatInputModule,
     MatChipsModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    // AngularFireModule.initializeApp(environment.firebase),
+    // FirestoreModule,
+    // AngularFireDatabaseModule,
     
 
   ],

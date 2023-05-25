@@ -16,6 +16,7 @@
                         </tr>
                     </thead>
                     <tbody>
+                        
                         <tr *ngFor="let item of cartItems let i = index">
                             <td> {{i+1}}</td>
                             <td> {{item.prod_name}}</td>
@@ -39,7 +40,7 @@
                                 <a routerLink="/cart" [queryParams]="{deleted:item.cartItemid}">
                                     <button class="btn btn-danger" (click)="deleteCartItem(item.cartItemid)">
 
-                                        <i class="fas fa-trash-alt"></i></button></a>
+                                        <i class="fas fa-trash"></i></button></a>
 
                             </td>
                         </tr>
@@ -54,7 +55,11 @@
                             <td> 
                                 <button class="btn btn-success" (click)="checkoutClickHandler()">Checkout</button>
                             </td>
-                            <td><strong>Grand Total : {{totalAmount|currency:'INR'}}</strong></td>
+                            <td colspan="2"></td>
+                            <td>
+                        
+                                <p style="font-weight: bold">Shipping : FREE</p>
+                                <p><strong>Grand Total : {{totalAmount|currency:'INR'}}</strong></p></td>
                         </tr>
                     </tbody>
 

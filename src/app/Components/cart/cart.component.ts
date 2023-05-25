@@ -3,9 +3,9 @@ import { Component, OnInit, SimpleChange } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
-import { CartService } from 'src/app/Service/cart.service';
-import { SnackbarService } from 'src/app/Service/snackbar.service';
-import { UserService } from 'src/app/Service/user.service';
+import { CartService } from '../../Service/cart.service';
+import { SnackbarService } from '../../Service/snackbar.service';
+import { UserService } from '../../Service/user.service';
 
 import { CheckoutComponent } from '../checkout/checkout.component';
 
@@ -23,7 +23,7 @@ export class CartComponent implements OnInit {
   item: any;
 //  public cartItemList:any=[];
 //  public productList = new BehaviorSubject<any>([])
-constructor(private httpClient:HttpClient, private cartService:CartService,private dialog:MatDialog,private route:ActivatedRoute,private snackBarService:SnackbarService,private userServicec:UserService )
+constructor(private httpClient:HttpClient, private cartService:CartService,public dialog:MatDialog,private route:ActivatedRoute,private snackBarService:SnackbarService,private userServicec:UserService )
 {
   
   // this.grandTotal();
@@ -94,8 +94,9 @@ getUserCartItems(id:any)
 }
 deleteCartItem(cartItemId:any)
 {
-  
+  if(confirm('Are you sure to delete?'))
   this.cartService.deleteCartItems(cartItemId).subscribe((res:any)=>{
+   
     this.removeCartItem(cartItemId)
     console.log(res);
     this.responseMessage = res?.message;
